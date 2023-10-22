@@ -17,6 +17,9 @@
       #main-field{
         margin-top: 5rem!important;
       }
+      body{
+        background-image: linear-gradient(to right, powderblue, lightpink);
+      }
     </style>
     <body id="page-top">
         <!-- Navigation-->

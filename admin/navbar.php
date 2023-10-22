@@ -3,9 +3,12 @@
 	.collapse a{
 		text-indent:10px;
 	}
+	.custom-nav{
+  background-color: #7bb2d4;
+}
 </style>
 
-<nav id="sidebar" class='mx-lt-5 bg-dark' >
+<nav id="sidebar" class='mx-lt-5 custom-nav' >
 		
 		<div class="sidebar-list">
 				<a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Home</a>

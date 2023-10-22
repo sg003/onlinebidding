@@ -55,7 +55,8 @@ header("location:index.php?page=home");
 		background:#59b6ec61;
 		display: flex;
 		align-items: center;
-		background: url(assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>);
+		background-image: url('./assets/background.jpg');
+		/* background: url(assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>); */
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}
@@ -79,7 +80,7 @@ div#login-right::before {
     left: 0;
     width: calc(100%);
     height: calc(100%);
-    background: #000000e0;
+    background-image: url('./assets/background.jpg');
 }
 
 </style>

@@ -20,7 +20,7 @@
 </head>
 <style>
 	body{
-        background: #80808045;
+        background-image: linear-gradient(to right, powderblue, lightpink);
   }
   .modal-dialog.large {
     width: 80% !important;

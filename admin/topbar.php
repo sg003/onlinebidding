@@ -7,15 +7,18 @@
     border-radius: 50% 50%;
     color: #000000b3;
 }
+.custom-nav{
+  background-color: #7bb2d4;
+}
 </style>
 
-<nav class="navbar navbar-light fixed-top bg-primary" style="padding:0;min-height: 3.5rem">
+<nav class="navbar navbar-light fixed-top custom-nav" style="padding:0;min-height: 3.5rem">
   <div class="container-fluid mt-2 mb-2">
   	<div class="col-lg-12">
   		<div class="col-md-1 float-left" style="display: flex;">
   		
   		</div>
-      <div class="col-md-4 float-left text-white">
+      <div class="col-md-4 float-left text-black">
         <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large>
       </div>
 	  	<div class="float-right">
