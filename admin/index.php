@@ -13,7 +13,6 @@
   if(!isset($_SESSION['login_id']))
     header('location:login.php');
  include('./header.php'); 
- // include('./auth.php'); 
  date_default_timezone_set('Asia/Manila');
  ?>
 
@@ -33,7 +32,6 @@
   #viewer_modal .btn-close {
     position: absolute;
     z-index: 999999;
-    /*right: -4.5em;*/
     background: unset;
     color: white;
     border: unset;

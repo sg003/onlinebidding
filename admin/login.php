@@ -31,7 +31,6 @@ header("location:index.php?page=home");
 	body{
 		width: 100%;
 	    height: calc(100%);
-	    /*background: #007bff;*/
 	}
 	main#main{
 		width:100%;
@@ -56,7 +55,6 @@ header("location:index.php?page=home");
 		display: flex;
 		align-items: center;
 		background-image: url('./assets/background.jpg');
-		/* background: url(assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>); */
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}
