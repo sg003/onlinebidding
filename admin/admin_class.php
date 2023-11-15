@@ -109,6 +109,23 @@ Class Action {
 		$data .= ", contact = '$contact' ";
 		$data .= ", address = '$address' ";
 		$data .= ", password = '".md5($password)."' ";
+
+		function sanitize_input($data) {
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
+		
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+		{
+			return 3;
+			exit;
+		}
+		if (strlen($contact) > 10 ){
+			return 4;
+			exit;
+		}
 		$chk = $this->db->query("SELECT * FROM users where email = '$email' ")->num_rows;
 		if($chk > 0){
 			return 2;

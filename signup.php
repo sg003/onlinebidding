@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php session_start(); $emailErr = ""; 
+$contactErr = "";?>
+
 <div class="container-fluid">
 	<form action="" id="signup-frm">
 		<div class="form-group">
@@ -16,6 +18,7 @@
 		<div class="form-group">
 			<label for="" class="control-label">Email</label>
 			<input type="email" name="email" required="" class="form-control">
+			<span class="error"><?php echo "<br>" . $emailErr; ?></span>
 		</div>
 		<div class="form-group">
 			<label for="" class="control-label">Username</label>
@@ -54,7 +57,14 @@
 			success:function(resp){
 				if(resp == 1){
 					location.reload();
-				}else{
+				}else if(resp == 3){
+					$('#signup-frm').prepend('<div class="alert alert-danger">Email Invalid.</div>')
+					end_load()
+				}else if(resp == 4){
+					$('#signup-frm').prepend('<div class="alert alert-danger">Contact Number too large</div>')
+					end_load()
+				}
+				else{
 					$('#signup-frm').prepend('<div class="alert alert-danger">Email already exist.</div>')
 					end_load()
 				}

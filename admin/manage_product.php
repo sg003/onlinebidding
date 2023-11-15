@@ -172,7 +172,8 @@ img#img_path-field{
 					<div class="form-group row">
 						<div class="col-md-4">
 							<label for="" class="control-label">Bidding End Date/Time</label>
-							<input type="text" class="form-control datetimepicker" name="bid_end_datetime" value="<?php echo isset($bid_end_datetime) && strtotime($bid_end_datetime) > 0 ? date("Y-m-d H:i",strtotime($bid_end_datetime)) : '' ?>">
+							<input type="text" class="form-control datetimepicker" name="bid_end_datetime" required value="<?php echo isset($bid_end_datetime) && strtotime($bid_end_datetime) > time() ? date("Y-m-d H:i", strtotime($bid_end_datetime)) : '' ?>">
+							<!-- <input type="text" class="form-control datetimepicker" name="bid_end_datetime" value="<?php echo isset($bid_end_datetime) && strtotime($bid_end_datetime) > 0 ? date("Y-m-d H:i",strtotime($bid_end_datetime)) : '' ?>"> -->
 						</div>
 					</div>
 					<div class=" row form-group">
